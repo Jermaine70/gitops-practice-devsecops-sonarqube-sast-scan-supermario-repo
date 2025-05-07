@@ -1,9 +1,9 @@
 name: "Run Container Scan on Super Mario Docker Image with Quality Gate"
 
-on:
-  push:
-    branches:
-      - main
+#on:
+#  push:
+#    branches:
+#      - main
 
 jobs:
   run_container_image_scan_on_supermario_docker_image:
@@ -33,4 +33,3 @@ jobs:
           image-ref: docker.io/jermainejordan/supermariogitopsproject:${{ env.VERSION }}
           exit-code: '0'
           severity: 'CRITICAL,HIGH'
-          
